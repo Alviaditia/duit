@@ -1,0 +1,191 @@
+{
+  "wallets": [
+    {
+      "color": "emerald",
+      "type": "cash",
+      "id": "w1",
+      "icon": "Banknote",
+      "name": "Tunai (Cash)",
+      "balance": 433000
+    },
+    {
+      "balance": 5850000,
+      "type": "bank",
+      "id": "w2",
+      "name": "Bank BCA",
+      "icon": "CreditCard",
+      "color": "blue"
+    },
+    {
+      "id": "w3",
+      "icon": "Building2",
+      "name": "Bank Mandiri",
+      "color": "indigo",
+      "balance": 2400000,
+      "type": "bank"
+    },
+    {
+      "icon": "Smartphone",
+      "name": "GoPay",
+      "color": "teal",
+      "type": "ewallet",
+      "balance": 110000,
+      "id": "w4"
+    },
+    {
+      "balance": 85000,
+      "name": "OVO",
+      "icon": "Wallet",
+      "color": "purple",
+      "id": "w5",
+      "type": "ewallet"
+    },
+    {
+      "balance": 120000,
+      "name": "Dana",
+      "icon": "Zap",
+      "id": "w6",
+      "color": "sky",
+      "type": "ewallet"
+    }
+  ],
+  "budgets": [
+    {
+      "monthlyLimit": 2500000,
+      "category": "Makanan & Minuman",
+      "id": "b1",
+      "month": "2026-10"
+    },
+    {
+      "category": "Transportasi",
+      "monthlyLimit": 800000,
+      "month": "2026-10",
+      "id": "b2"
+    },
+    {
+      "monthlyLimit": 1500000,
+      "month": "2026-10",
+      "id": "b3",
+      "category": "Belanja & Kebutuhan"
+    },
+    {
+      "monthlyLimit": 1200000,
+      "id": "b4",
+      "category": "Tagihan & Utilitas",
+      "month": "2026-10"
+    },
+    {
+      "id": "b5",
+      "monthlyLimit": 600000,
+      "category": "Hiburan",
+      "month": "2026-10"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-1792139826101",
+      "type": "EXPENSE",
+      "amount": 20000,
+      "category": "Makanan & Minuman",
+      "wallet": "GoPay",
+      "toWallet": "",
+      "description": "Makan Siang Padang",
+      "transactionTime": "15.37 WIB",
+      "date": "2026-10-16T08:37:06.101Z",
+      "source": "telegram",
+      "rawInput": "25rb"
+    },
+    {
+      "type": "EXPENSE",
+      "description": "Token Listrik PLN 250k",
+      "id": "tx-6",
+      "rawInput": "Bayar token listrik 250rb mandiri",
+      "wallet": "Bank Mandiri",
+      "amount": 250000,
+      "source": "telegram",
+      "category": "Tagihan & Utilitas",
+      "date": "2026-10-15T10:45:00.000Z"
+    },
+    {
+      "amount": 50000,
+      "source": "telegram",
+      "wallet": "Dana",
+      "id": "tx-5",
+      "category": "Transportasi",
+      "date": "2026-10-15T08:15:00.000Z",
+      "description": "Isi Bensin Pertamax",
+      "type": "EXPENSE",
+      "rawInput": "Beli bensin pertamax 50rb pake dana"
+    },
+    {
+      "category": "Makanan & Minuman",
+      "description": "Makan Siang",
+      "date": "2026-10-15T01:06:00.402Z",
+      "id": "tx-1792026360402",
+      "transactionTime": "12.00 WIB",
+      "source": "telegram",
+      "amount": 17000,
+      "rawInput": "makan siang jam 12",
+      "wallet": "Tunai (Cash)",
+      "type": "EXPENSE"
+    },
+    {
+      "transactionTime": "07.53 WIB",
+      "id": "tx-1792025615166",
+      "rawInput": "makan ramen 45rb pake gopay",
+      "type": "EXPENSE",
+      "wallet": "GoPay",
+      "date": "2026-10-15T00:53:35.166Z",
+      "source": "telegram",
+      "amount": 45000,
+      "description": "Makan Ramen",
+      "toWallet": "",
+      "category": "Makanan & Minuman"
+    },
+    {
+      "type": "EXPENSE",
+      "rawInput": "Struk Indomaret Rp 145.000",
+      "description": "Belanja Mingguan Indomaret",
+      "category": "Belanja & Kebutuhan",
+      "wallet": "Bank BCA",
+      "amount": 145000,
+      "source": "receipt",
+      "date": "2026-10-14T19:10:00.000Z",
+      "id": "tx-4"
+    },
+    {
+      "rawInput": "Makan siang nasi padang 65rb tunai",
+      "date": "2026-10-14T12:35:00.000Z",
+      "description": "Makan Nasi Padang Sederhana",
+      "id": "tx-3",
+      "category": "Makanan & Minuman",
+      "type": "EXPENSE",
+      "source": "voice",
+      "amount": 65000,
+      "wallet": "Tunai (Cash)"
+    },
+    {
+      "type": "EXPENSE",
+      "rawInput": "Kopi kenangan 35rb pake gopay",
+      "id": "tx-2",
+      "wallet": "GoPay",
+      "category": "Makanan & Minuman",
+      "description": "Kopi Kenangan Mantan Large",
+      "amount": 35000,
+      "source": "telegram",
+      "date": "2026-10-13T14:20:00.000Z"
+    },
+    {
+      "category": "Gaji",
+      "amount": 8500000,
+      "source": "web",
+      "id": "tx-1",
+      "wallet": "Bank BCA",
+      "description": "Gaji Bulanan Oktober",
+      "date": "2026-10-13T09:00:00.000Z",
+      "type": "INCOME",
+      "rawInput": "Gaji masuk BCA 8.5jt"
+    }
+  ],
+  "updatedAt": "2026-10-16T08:37:15.911Z"
+}

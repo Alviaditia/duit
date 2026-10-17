@@ -1,0 +1,6 @@
+{
+  "name": "TeleFinance AI - Pencatatan Keuangan Telegram & AI",
+  "description": "Aplikasi pencatatan keuangan pintar terintegrasi bot Telegram dan AI Gemini untuk catat transaksi otomatis via teks, suara, dan struk belanja.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

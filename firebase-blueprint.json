@@ -1,0 +1,103 @@
+{
+  "entities": {
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Financial transaction record for expense, income, or transfer",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string", "enum": ["EXPENSE", "INCOME", "TRANSFER"] },
+        "amount": { "type": "number" },
+        "category": { "type": "string" },
+        "wallet": { "type": "string" },
+        "toWallet": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string" },
+        "transactionTime": { "type": "string" },
+        "source": { "type": "string", "enum": ["telegram", "voice", "receipt", "web"] },
+        "rawInput": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "type", "amount", "category", "wallet", "description", "date"]
+    },
+    "Wallet": {
+      "title": "Wallet",
+      "description": "Financial wallet or account (cash, bank, ewallet) with current balance",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string", "enum": ["cash", "bank", "ewallet"] },
+        "balance": { "type": "number" },
+        "icon": { "type": "string" },
+        "color": { "type": "string" }
+      },
+      "required": ["id", "name", "type", "balance"]
+    },
+    "Budget": {
+      "title": "Budget",
+      "description": "Monthly spending budget target per category",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "monthlyLimit": { "type": "number" },
+        "month": { "type": "string" }
+      },
+      "required": ["id", "category", "monthlyLimit", "month"]
+    },
+    "TelegramLog": {
+      "title": "TelegramLog",
+      "description": "Audit log of incoming and outgoing Telegram bot messages",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "senderName": { "type": "string" },
+        "username": { "type": "string" },
+        "chatId": { "type": "string" },
+        "input": { "type": "string" },
+        "reply": { "type": "string" },
+        "isTransaction": { "type": "boolean" }
+      },
+      "required": ["id", "timestamp", "chatId", "input", "reply"]
+    },
+    "TelegramConfig": {
+      "title": "TelegramConfig",
+      "description": "Telegram bot integration settings",
+      "type": "object",
+      "properties": {
+        "botToken": { "type": "string" },
+        "botUsername": { "type": "string" },
+        "webhookUrl": { "type": "string" },
+        "mode": { "type": "string", "enum": ["polling", "webhook"] },
+        "isActive": { "type": "boolean" },
+        "lastSync": { "type": "string" }
+      },
+      "required": ["mode", "isActive"]
+    }
+  },
+  "firestore": {
+    "/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Global collection of all financial transactions"
+    },
+    "/wallets/{walletId}": {
+      "schema": "Wallet",
+      "description": "Global collection of user wallets and accounts"
+    },
+    "/budgets/{budgetId}": {
+      "schema": "Budget",
+      "description": "Global collection of monthly budget limits"
+    },
+    "/telegram_logs/{logId}": {
+      "schema": "TelegramLog",
+      "description": "Audit log of Telegram chats and AI processing results"
+    },
+    "/app_settings/{settingId}": {
+      "schema": "TelegramConfig",
+      "description": "App settings including Telegram configuration"
+    }
+  }
+}

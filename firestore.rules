@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /transactions/{transactionId} {
+      allow read, write: if true;
+    }
+
+    match /wallets/{walletId} {
+      allow read, write: if true;
+    }
+
+    match /budgets/{budgetId} {
+      allow read, write: if true;
+    }
+
+    match /telegram_logs/{logId} {
+      allow read, write: if true;
+    }
+
+    match /app_settings/{settingId} {
+      allow read, write: if true;
+    }
+
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+  }
+}
